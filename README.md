@@ -20,13 +20,14 @@ Capture a receipt with your camera or upload a file (PDF/JPG/PNG). Gemini-powere
 
 For added reliability, ClaimSync also uses **Tesseract OCR** as a scanning layer for bills, giving the extraction pipeline a fast, offline-capable fallback alongside Gemini's vision-based parsing.
 
-### Warranties Vault
+### Warranties Vault & Risk Radar
 A living dashboard of everything you've protected:
 - Lifecycle status tracking — **Active, Expiring Soon, Critical (≤7 days), Expired, Estimated**
+- **Vault Risk Radar** — items grouped into **Critical (<7 days), Warning (<30 days), and Secure (>30 days)** tiers at a glance
 - Real-time days-remaining counters
 - Search, filter, and sort across your entire vault
 - Invoice/receipt attachments per item
-- **Money-at-risk** calculations so you know exactly what's on the line
+- **Money-at-risk** calculations, with total warranty exposure tracked in your local currency, so you know exactly what's on the line
 
 ### Auto-Claims Engine
 When something goes wrong, ClaimSync writes the claim for you:
@@ -43,6 +44,9 @@ Take control of recurring spend:
 - Next billing date tracking with renewal countdowns
 - One-click, step-by-step cancellation guides
 
+### Offers & Renewals
+Surfaces relevant deals, upgrade offers, and renewal opportunities tied to your protected products and subscriptions, so you can act before a renewal window closes.
+
 ### Savings & Analytics
 See the ROI of staying organized:
 - Money saved via successful claims & repairs
@@ -57,9 +61,14 @@ A floating, context-aware assistant that:
 - Includes fallback resilience if the AI service is unavailable
 
 ### Visual System
-- 6 switchable atmospheric color themes
+- 6 switchable atmospheric color themes (e.g. Yellow & Blue)
 - Synchronized UI controls across the app
 - Subtle micro-animations for a polished feel
+- Mobile-first, responsive layout
+
+### Privacy & Trust
+- 100% Privacy Guard — user data handling is front and center in the UI, not buried in settings
+- Designed to keep receipt and financial data scoped to the user's own vault
 
 ---
 
@@ -91,7 +100,6 @@ claimsync/
 
 ## Roadmap
 - [ ] Mobile app (React Native)
-- [ ] Multi-currency support
+- [ ] Additional currency & locale support
 - [ ] Shared/family vaults
 - [ ] Push notifications for expiring warranties & renewals
-
