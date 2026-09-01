@@ -1,0 +1,10 @@
+{
+  "name": "ClaimSync",
+  "description": "Mobile-first OCR warranty tracker, claim email generator, and subscription burn dashboard powered by Tesseract.js and Supabase.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

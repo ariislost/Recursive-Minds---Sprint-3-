@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@layer base {
+  :root, [data-theme="yellow-blue"] {
+    --color-slate-bg: #081018;
+    --color-slate-card: rgba(14, 23, 33, 0.75);
+    --color-slate-subtle: rgba(18, 30, 43, 0.55);
+    --color-accent: #F5B041;
+    --color-accent-hover: #E5A030;
+    --color-accent-light: #FDE68A;
+    --color-accent-secondary: #E8664A;
+    --color-accent-rgb: 245, 176, 65;
+    --color-accent-subtle: rgba(245, 176, 65, 0.15);
+    --color-accent-border: rgba(245, 176, 65, 0.35);
+    --color-accent-glow: rgba(245, 176, 65, 0.25);
+    --color-theme-gradient: linear-gradient(135deg, #F5B041 0%, #E8664A 100%);
+  }
+
+  [data-theme="red-blue"] {
+    --color-slate-bg: #080D1A;
+    --color-slate-card: rgba(13, 20, 36, 0.78);
+    --color-slate-subtle: rgba(17, 27, 48, 0.55);
+    --color-accent: #F43F5E;
+    --color-accent-hover: #E11D48;
+    --color-accent-light: #FECDD3;
+    --color-accent-secondary: #FB7185;
+    --color-accent-rgb: 244, 63, 94;
+    --color-accent-subtle: rgba(244, 63, 94, 0.15);
+    --color-accent-border: rgba(244, 63, 94, 0.35);
+    --color-accent-glow: rgba(244, 63, 94, 0.25);
+    --color-theme-gradient: linear-gradient(135deg, #F43F5E 0%, #E11D48 100%);
+  }
+
+  [data-theme="green-blue"] {
+    --color-slate-bg: #06111C;
+    --color-slate-card: rgba(10, 24, 38, 0.78);
+    --color-slate-subtle: rgba(14, 32, 50, 0.55);
+    --color-accent: #10B981;
+    --color-accent-hover: #059669;
+    --color-accent-light: #A7F3D0;
+    --color-accent-secondary: #06B6D4;
+    --color-accent-rgb: 16, 185, 129;
+    --color-accent-subtle: rgba(16, 185, 129, 0.15);
+    --color-accent-border: rgba(16, 185, 129, 0.35);
+    --color-accent-glow: rgba(16, 185, 129, 0.25);
+    --color-theme-gradient: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+  }
+
+  body {
+    background-color: var(--color-slate-bg);
+    color: #F3F4F6;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease;
+  }
+
+  h1, h2, h3 {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Glassmorphic custom styling with theme integration */
+.glass-panel {
+  background: var(--color-slate-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-panel-subtle {
+  background: var(--color-slate-subtle);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-input {
+  background: rgba(8, 15, 23, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+.glass-input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent-subtle);
+}
+
+/* Dynamic Accent Utility Classes */
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+.border-accent-subtle {
+  border-color: var(--color-accent-border);
+}
+
+.bg-accent-subtle {
+  background-color: var(--color-accent-subtle);
+}
+
+.bg-accent-gradient {
+  background: var(--color-theme-gradient);
+}
+
+.accent-glow {
+  box-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.fill-accent {
+  fill: var(--color-accent);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes perimeterDash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -200;
+  }
+}
+
+.animate-perimeter-flow {
+  stroke-dasharray: 25 75;
+  animation: perimeterDash 12s linear infinite;
+}
