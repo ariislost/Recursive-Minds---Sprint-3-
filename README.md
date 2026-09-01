@@ -94,12 +94,14 @@ claimsync/
 └── README.md
 ```
 
-*(Adjust to match your actual repo layout.)*
-
 ---
 
 ## Roadmap
-- [ ] Mobile app (React Native)
-- [ ] Additional currency & locale support
-- [ ] Shared/family vaults
-- [ ] Push notifications for expiring warranties & renewals
+
+```
++---------------------+    +---------------------+    +---------------------+    +---------------------+
+| Mobile App          |  ->| Currency & Locale   |  ->| Shared / Family     |  ->| Push Notifications  |
+| (React Native)      |    | Support             |    | Vaults              |    | for Renewals &      |
+|                     |    |                     |    |                     |    | Expiring Warranties |
++---------------------+    +---------------------+    +---------------------+    +---------------------+
+```
